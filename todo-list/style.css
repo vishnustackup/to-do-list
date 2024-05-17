@@ -1,0 +1,135 @@
+body{
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(170,37,147,1) 0%, rgba(121,9,28,1) 90%);
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+}
+
+.box{
+    max-width: 500px;
+    border-radius: 15px;
+    background-color: #ffff;
+    width: 100%;
+    margin: 100px auto 20px;
+    padding: 1px 30px 70px;
+}
+.box img{
+    width: 40px;
+    height: 70px ;
+}
+
+.box h2{
+color: blue;
+font-weight: 700;
+font-size: 40px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: beige;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+input{
+    flex:1;
+    border: none;
+    outline: none;
+    background:transparent;
+    padding: 10px;
+    font-weight: 20;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    background-color: chocolate;
+}
+
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+content: "";
+position: absolute;
+height: 28px;
+width: 28px;
+border-radius: 50%;
+background-image: url(img/unchecked.png);
+background-size: cover;
+background-position: center;
+top: 12px;
+left: 10px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(img/checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+
+}
+ul li span:hover{
+    background-color: #d6cfcf;
+    border-radius: 50%;
+}
+/* responsive */
+
+@media (max-width:900px) {
+ 
+    .row{
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: beige;
+            border-radius: 30px;
+          
+        }
+    }
+    .box{
+        background-color: aqua;
+    }
+}
+@media (max-width:650px) {
+.box{
+    max-width: 350px;
+}
+}
+
+@media (max-width:423px) {
+   
+    .row{
+        display: flex;
+        flex-direction: column;
+      
+    }
+    }
